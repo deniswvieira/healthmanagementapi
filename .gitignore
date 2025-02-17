@@ -1,0 +1,11 @@
+*.db
+*.pyc
+*.log
+*.orig
+*.sql
+*.sqlite3
+/logs/*
+/.idea/
+/venv
+/.venv
+/node_modules

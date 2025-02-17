@@ -1,0 +1,22 @@
+{
+  "name": "health-management",
+  "version": "0.1.0",
+  "description": "",
+  "homepage": "https://github.com/deniswvieira/healthmanagementapi",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:deniswvieira/healthmanagementapi.git"
+  },
+  "scripts": {
+    "prepare": "husky",
+    "format": "poetry run black . && poetry run flake8 . && poetry run isort ."
+  },
+  "author": "Denis Vieira <deniswvieira@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@commitlint/cli": "^19.7.1",
+    "@commitlint/config-conventional": "^19.7.1",
+    "husky": "^9.1.7"
+  }
+}
+
