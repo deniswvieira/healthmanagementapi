@@ -14,8 +14,7 @@ fhir-resources = "^8.0.0"
 drf-yasg = "^1.21.8"
 gunicorn = "^23.0.0"
 whitenoise = "^6.9.0"
-psycopg-binary = "^3.2.4"
-psycopg-pool = "^3.2.4"
+psycopg = {extras = ["pool"], version = "^3.2.4"}
 
 
 [tool.poetry.group.dev.dependencies]
