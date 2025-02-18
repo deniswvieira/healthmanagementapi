@@ -30,9 +30,11 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.black]
 target-version = ['py310']
+line-length = 88
 
 [tool.flake8]
 exclude = [".venv", "migrations", "__pycache__"]
+max-line-length = 88
 
 [tool.isort]
 profile = "black"
