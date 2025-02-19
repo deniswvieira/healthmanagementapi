@@ -14,7 +14,7 @@ fhir-resources = "^8.0.0"
 drf-yasg = "^1.21.8"
 gunicorn = "^23.0.0"
 whitenoise = "^6.9.0"
-psycopg = {extras = ["pool"], version = "^3.2.4"}
+psycopg = { extras = ["pool"], version = "^3.2.4" }
 
 
 [tool.poetry.group.dev.dependencies]
@@ -25,6 +25,7 @@ autoflake = "^2.3.1"
 pytest = "^8.3.4"
 pytest-django = "^4.10.0"
 pre-commit = "^4.1.0"
+pytest-cov = "^6.0.0"
 
 [build-system]
 requires = ["poetry-core"]
@@ -44,7 +45,3 @@ profile = "black"
 
 [tool.autoflake]
 remove-all-unused-imports = true
-
-[tool.pytest.ini_options]
-DJANGO_SETTINGS_MODULE = "settings.configs"
-python_files = ["test_*.py", "*_test.py", "tests.py"]
