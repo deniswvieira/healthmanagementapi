@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the API</title>
+    <style>
+        /* Catppuccin Mocha Dark Theme */
+        :root {
+            --base: #1e1e2e;
+            --mantle: #181825;
+            --crust: #11111b;
+            --text: #cdd6f4;
+            --subtext: #a6adc8;
+            --blue: #89b4fa;
+            --green: #a6e3a1;
+            --red: #f38ba8;
+            --yellow: #f9e2af;
+            --mauve: #cba6f7;
+        }
+
+        body {
+            font-family: "Arial", sans-serif;
+            background-color: var(--base);
+            color: var(--text);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: var(--subtext);
+            margin-bottom: 20px;
+        }
+
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .link {
+            text-decoration: none;
+            color: var(--blue);
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background-color: var(--mantle);
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: 0.3s;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .link:hover {
+            background-color: var(--crust);
+            color: var(--yellow);
+        }
+
+        .icon {
+            width: 20px;
+            height: 20px;
+            fill: var(--blue);
+        }
+
+        .credentials {
+            background-color: var(--mantle);
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 10px;
+            font-size: 1rem;
+            color: var(--text);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .credentials strong {
+            color: var(--mauve);
+        }
+
+        /* Footer */
+        .footer {
+            position: fixed;
+            bottom: 10px;
+            font-size: 0.9rem;
+            color: var(--subtext);
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Responsividade */
+        @media (max-width: 600px) {
+            body {
+                height: auto;
+                padding: 10px;
+            }
+
+            .links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .link {
+                font-size: 1rem;
+                width: auto;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Welcome to the API</h1>
+    <p>Your gateway to powerful data.</p>
+
+    <div class="links">
+        <a href="/swagger/" class="link">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18.5A8.5 8.5 0 1 1 20.5 12 8.5 8.5 0 0 1 12 20.5zM12 6a6 6 0 1 0 6 6 6 6 0 0 0-6-6zm0 10.5A4.5 4.5 0 1 1 16.5 12 4.5 4.5 0 0 1 12 16.5z" />
+            </svg>
+            Swagger
+        </a>
+        <a href="/redoc/" class="link">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                    d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm5.9 10a1 1 0 0 1-1 1h-9.8a1 1 0 0 1-1-1v-2a1 1 0 0 1 1-1h9.8a1 1 0 0 1 1 1zm-1.4 4.5H7.5a1 1 0 0 1 0-2h9a1 1 0 0 1 0 2z" />
+            </svg>
+            Redoc
+        </a>
+        <a href="https://github.com/deniswvieira/healthmanagementapi" class="link" target="_blank">
+            <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <path
+                    d="M12 2a10 10 0 0 0-3.16 19.51c.5.09.69-.21.69-.47v-1.71c-2.8.61-3.39-1.35-3.39-1.35a2.68 2.68 0 0 0-1.12-1.48c-.91-.63.07-.62.07-.62a2.13 2.13 0 0 1 1.56 1.05 2.15 2.15 0 0 0 2.93.83 2.16 2.16 0 0 1 .64-1.36c-2.24-.25-4.6-1.12-4.6-4.98a3.89 3.89 0 0 1 1-2.7 3.61 3.61 0 0 1 .1-2.67s.84-.27 2.75 1a9.42 9.42 0 0 1 5 0c1.91-1.27 2.75-1 2.75-1a3.61 3.61 0 0 1 .1 2.67 3.89 3.89 0 0 1 1 2.7c0 3.87-2.37 4.73-4.62 4.98a2.41 2.41 0 0 1 .69 1.86v2.76c0 .26.19.56.7.47A10 10 0 0 0 12 2z" />
+            </svg>
+            GitHub
+        </a>
+    </div>
+
+    <div class="credentials">
+        <p><strong>Your test credentials are:</strong></p>
+        <p>Username: <strong>tester</strong></p>
+        <p>Password: <strong>tester</strong></p>
+    </div>
+
+    <footer class="footer">
+        © Denis Vieira
+    </footer>
+</body>
+
+</html>
