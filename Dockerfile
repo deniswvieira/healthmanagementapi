@@ -23,9 +23,12 @@ COPY . .
 
 # Prepare django project
 RUN poetry run python manage.py collectstatic --noinput
-RUN poetry run python manage.py migrate
+# RUN poetry run python manage.py migrate
 
 EXPOSE 8000
 
-# Run Gunicorn 
-CMD ["poetry", "run", "gunicorn", "--bind", "0.0.0.0:8000", "settings.wsgi:application"]
+COPY /docker-entrypoint.sh /docker-entrypoint.sh
+RUN chmod +x /docker-entrypoint.sh
+
+# Define entry point
+ENTRYPOINT ["/docker-entrypoint.sh"]
